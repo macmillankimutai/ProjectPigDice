@@ -7,3 +7,10 @@
 .player-one-rolls-one{
   display: none;
 }
+
+#cont2{
+  background-color: green;
+}
+#cont{
+  background-color: skyblue;
+}
