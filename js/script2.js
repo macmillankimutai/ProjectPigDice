@@ -8,7 +8,7 @@ function Player(name) {
 
 var playerOne = new Player("Player One");
 var playerTwo = new Player("Player Two");
-console.log(playerOne, playerTwo);
+console.log(player One, player Two);
 
 function Dice(sides) {
   this.sides = sides || 6;
