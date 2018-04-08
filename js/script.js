@@ -56,16 +56,6 @@ Player.prototype.resetRunningTotalOnOne = function() {
   }
 }
 
-
-$("#player-one-roll").on("click", function() {
-  var animationName = 'animated tada';
-  var animationEnd = 'webkitAnimationEnd mozAimationEnd MSAnimationEnd oanimationend animationend';
-  $("#dice-pic").addClass(animationName).one(animationEnd, function()
-  {
-    $(this).removeClass(animationName);
-  });
-});
-
 $("#player-one-roll").click(function(event) {
   event.preventDefault();
   var sixSidedDiceRoll = sixSidedDice.roll();
@@ -77,7 +67,6 @@ $("#player-one-roll").click(function(event) {
   $("#player-one-running").html("<h1 class = 'running-total'>" + playerOne.turnRunningScore + "</h1>");
 
   if (sixSidedDiceRoll === 1) {
-    $("#dice-pic").attr("src","img");
     var playerOneTurn = false;
     if(!playerOneTurn) {
       $("#player-two-buttons").show()
@@ -88,15 +77,15 @@ $("#player-one-roll").click(function(event) {
       $("#player-two-buttons").hide();
     }
   } else if (sixSidedDiceRoll === 2) {
-    $("#dice-pic").attr("src","img");
+
   } else if (sixSidedDiceRoll === 3){
-    $("#dice-pic").attr("src","img");
+
   } else if (sixSidedDiceRoll === 4) {
-      $("#dice-pic").attr("src", "img/four.png");
+
   } else if (sixSidedDiceRoll === 5) {
-      $("#dice-pic").attr("src", "img/five.png");
+
     } else if (sixSidedDiceRoll === 6) {
-      $("#dice-pic").attr("src", "img/six.png");
+
     }
   });
 
@@ -136,7 +125,6 @@ $("#player-two-roll").click(function(event){
   $("#player-two-running").html("</h1 class='running-total'>" + playerTwo.turnRunningScore + "</h1>");
 
   if(sixSidedDiceRoll === 1){
-    $("#dice-pic").attr("src", "img/one.png");
   var playerOneTurn = true;
   if (playerOneTurn) {
      $("#player-one-buttons").show();
@@ -146,24 +134,18 @@ $("#player-two-roll").click(function(event){
     $("#player-one-buttons").hide();
   }
 } else if (sixSidedDiceRoll === 2) {
-  $("#dice-pic").attr("src", "img/two.png");
+
 } else if (sixSidedDiceRoll === 3) {
-  $("#dice-pic").attr("src", "img/three.png");
+
 } else if (sixSidedDiceRoll === 4) {
-  $("#dice-pic").attr("src", "img/four.png");
+
 } else if (sixSidedDiceRoll === 5) {
-  $("#dice-pic").attr("src", "img/five.png");
+
 } else if (sixSidedDiceRoll === 6) {
-  $("#dice-pic").attr("src", "img/six.png");
+
 }
 });
-  $("#player-two-roll").on("click",function() {
-    var animationName = 'animated tada';
-  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $("#dice-pic").addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
-  });
-});
+;
 
 $("#player-two-stay").click(function(event)
   {
