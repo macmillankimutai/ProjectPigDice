@@ -1,0 +1,9 @@
+#title{
+  text-align: center;
+  font-size: 72px;
+  font-family: fantasy;
+  color: darkred;
+}
+.player-one-rolls-one{
+  display: none;
+}
